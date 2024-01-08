@@ -23,15 +23,21 @@ public class To_do_list {
 
 			case 1:
 				System.out.println("Please add task: ");
-				addTodos = sc.next();
+				addTodos = sc.nextLine();
 				System.out.println(addTodos);
 				list.add(addTodos);
 				System.out.println(list);
 				break;
 			case 2:
 				System.out.println("Please delete task: ");
-				deleteTodos = sc.next();
-				
+				deleteTodos = sc.nextLine();
+				System.out.println(deleteTodos);
+				if(list.contains(deleteTodos)) {
+					list.remove(deleteTodos);
+				}else {
+					System.out.println("item is not present");
+				}
+				System.out.println(list);
 				break;
 			case 3:
 				System.exit(0);
